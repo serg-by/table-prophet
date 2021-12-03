@@ -802,7 +802,7 @@ a:hover .arrow {
 
 }
 
-@media (max-width: 479px; ) {
+@media (max-width: 479px) {
     .pricing-item-horizontal{
         position: relative;
     }
