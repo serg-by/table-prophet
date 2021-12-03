@@ -235,6 +235,10 @@ a:hover .arrow {
     line-height: 24px;
 }
 
+.pricing-person{
+    display: none;
+}
+
 .pricing-card-price {
     font-size: 44px;
     line-height: 48px;
