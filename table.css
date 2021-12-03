@@ -1,0 +1,177 @@
+/* Table styles. */
+table {
+  width: 100%;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+td,
+th {
+  text-align: left;
+  padding: 8px 16px;
+ 
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: hsla(211, 0%, 70%, 0.04);
+  color: #fff;
+}
+
+thead{
+  background-color: #444;
+  position: sticky;
+ top: 64px;  
+}
+th {
+  
+  color: #fff;
+ position: sticky;
+ top: 64px;      
+}
+
+
+
+
+
+/* #mytable thead tr th:nth-child(2),
+#mytable tbody tr td:nth-child(2){
+    width: 52%;
+} */
+
+.salat{
+    font-size: 16px;
+    line-height: 1;
+    
+}
+.salat td{
+    padding: 1.2rem 1rem;
+    /* border-bottom: 1px solid #007afc; */
+    border-bottom: 1px solid #bbc2ce;
+}
+
+/* tfoot tr{
+    border-top: 1px solid #007afc;
+} */
+tfoot td{
+    text-align: right;
+    background-color: #007afc;
+    border-radius: 0 0 8px 8px;
+}
+
+.v2-color  td{
+  background-color: #2fc078;
+}
+.v3-color td{
+  background-color: #fed622;
+  color: #000;
+}
+.v4-color td{
+  background-color: #7539d7;
+}
+.v5-color td{
+  background-color: #ff9b31;
+}
+
+thead th:first-child{
+    border-top-left-radius: 8px;
+}
+
+thead th:last-child{
+    border-top-right-radius: 8px;
+}
+
+
+@media (max-width: 991.98px) {
+  
+  
+  thead th:last-child {
+  border-top-right-radius: 0;
+} 
+  thead th:first-child {
+  border-top-right-radius: 8px;
+}
+  
+ #mytable,
+  #mytable thead,
+  #mytable tbody,
+  #mytable tfoot {
+    width: 100%;
+    display: block;
+  }
+
+  #mytable tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #mytable tbody tr {
+    border-bottom: 1px solid #c5cdd8;
+  }
+  #mytable thead {
+    position: sticky;
+    top: 64px;  
+    background-color: #444;
+  }
+
+  #mytable thead tr th:nth-child(1){
+    width: 100%;
+  }
+  #mytable tbody tr td:nth-child(1) {
+    width: 3%;
+  }
+  
+  
+#mytable tbody tr td:nth-child(2){
+    width: 93%;
+  }
+
+  #mytable tr td,
+  #mytable tr th {
+    width: 25%;
+  }
+  
+  #mytable tfoot tr td{
+    width: 100%
+  }
+  .salat td{
+    width: 100% !important;
+  }
+ 
+}
+
+@media (max-width: 479px){
+  #mytable tbody tr td:nth-child(2){
+    width: 80%;
+  }
+}
+
+/* 
+@media (max-width: 768px) {
+ 
+  #mytable ,
+  #mytable  thead,
+  #mytable  tbody,
+  #mytable  tfoot {
+    width: 100%;
+    display: block
+}
+
+#mytable  tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#mytable  tr td,
+#mytable  tr th {
+    width: 19%
+}
+
+#mytable  tr td:first-child, #mytable  tr th:first-child {
+    display: none;
+}
+#mytable  tr td:nth-child(2), #mytable  tr th:nth-child(2) {
+  width: 100%;
+}
+} */
