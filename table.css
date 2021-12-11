@@ -120,12 +120,12 @@ thead th:last-child{
     width: 100%;
   }
   #mytable tbody tr td:nth-child(1) {
-    width: 5%;
+    width: 8%;
   }
   
   
 #mytable tbody tr td:nth-child(2){
-    width: 95%;
+    width: 92%;
   }
 
   #mytable tr td,
