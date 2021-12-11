@@ -4,10 +4,16 @@ table {
   color: #fff;
   font-family: 'Ubuntu', sans-serif;
 }
+
+#mytable > * span{
+  padding: 16px;
+  display: block;
+}
+
 td,
 th {
   text-align: left;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
  
   vertical-align: middle;
 }
@@ -22,9 +28,8 @@ thead{
   position: sticky;
  top: 64px;  
 }
-th {
-  
-  color: #fff;
+th {  
+color: #fff;
  position: sticky;
  top: 64px;      
 }
@@ -44,7 +49,6 @@ th {
     
 }
 .salat td{
-    padding: 1.2rem 1rem;
     /* border-bottom: 1px solid #007afc; */
     border-bottom: 1px solid #bbc2ce;
 }
@@ -52,6 +56,8 @@ th {
 /* tfoot tr{
     border-top: 1px solid #007afc;
 } */
+
+
 tfoot td{
     text-align: right;
     background-color: #007afc;
@@ -81,6 +87,68 @@ thead th:last-child{
 }
 
 
+@media (max-width: 768px) {
+    
+    
+  thead th:last-child {
+  border-top-right-radius: 0;
+} 
+  thead th:first-child {
+  border-top-right-radius: 8px;
+}
+
+
+  
+ #mytable,
+  #mytable thead,
+  #mytable tbody,
+  #mytable tfoot {
+    width: 100%;
+    display: block;
+  }
+  #mytable thead span{
+    padding: 8px 8px 4px 16px;
+  }
+
+  #mytable tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #mytable thead tr th:nth-child(1){
+    width: 100%;
+  }
+  #mytable tbody tr td:nth-child(1) {
+    width: 5%;
+  }
+  
+  
+#mytable tbody tr td:nth-child(2){
+    width: 95%;
+  }
+
+  #mytable tr td,
+  #mytable tr th {
+    width: 25%;
+  }
+  
+  #mytable tfoot tr td{
+    width: 100%
+  }
+  .salat td{
+    width: 100% !important;
+  }
+ 
+}
+
+@media (max-width: 479px){
+  #mytable tbody tr td:nth-child(2){
+    width: 80%;
+  }
+}
+
+/* 
 @media (max-width: 991.98px) {
   
   
@@ -144,7 +212,7 @@ thead th:last-child{
   #mytable tbody tr td:nth-child(2){
     width: 80%;
   }
-}
+} */
 
 /* 
 @media (max-width: 768px) {
