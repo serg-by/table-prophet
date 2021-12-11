@@ -70,7 +70,7 @@
                   </div> -->
                   <!-- <input type="checkbox" id="checbox" onclick="check()" ; /> -->
                
-                <div class="pricing-toggle">
+                <!-- <div class="pricing-toggle">
                     
                     <label class="point">
                         <span class="point-person">На человека</span>
@@ -78,7 +78,12 @@
                         <span class="point-banket">За банкет</span>
                     </label>
                     
-                </div>
+                </div> -->
+
+                <div class="pricing-filte">
+                    <button class="btn filter-pricing btn--active" data-filter="person" >На человека</button>
+                    <button class="btn filter-pricing" data-filter="banket">За банкет</button>
+                  </div>
 
 
                 <div class="pricing-items-horizontal" >
@@ -89,8 +94,8 @@
                                 <h3 class="pricing-card-title">
                                     Varint1 <span class="pricing-card-person">70 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price" style="display: none">73,40  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price">5 140,20 <span>руб</span></p>
+                                <p class="pricing-person pricing-card-price"  data-category = "person">73,40  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" data-category = "banket">5 140,20 <span>руб</span></p>
                             </div>
                             <div class=" pricing-card-horizontal-bottom">
                                 <div class="button-group">
@@ -411,8 +416,8 @@
                                 <h3 class="pricing-card-title">
                                     Variant2 <span class="pricing-card-person">40 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price" style="display: none">84,00  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price">3 386,70 <span>руб</span></p>                            
+                                <p class="pricing-person pricing-card-price"  data-category = "person">84,00  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" data-category = "banket">3 386,70 <span>руб</span></p>                            
                             </div>
 
                             <div class=" pricing-card-horizontal-bottom">
@@ -677,8 +682,8 @@
                                 <h3 class="pricing-card-title">
                                     Вариант3 <span class="pricing-card-person">35 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price" style="display: none">85,40  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price" >2 990,30 <span>руб</span></p>
+                                <p class="pricing-person pricing-card-price"  data-category = "person">85,40  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" data-category = "banket">2 990,30 <span>руб</span></p>
                             </div>
 
                             <div class=" pricing-card-horizontal-bottom">
@@ -1006,8 +1011,8 @@
                                 <h3 class="pricing-card-title">
                                     Вариант4 <span class="pricing-card-person">50 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price"style="display: none">67,50  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price">3 372,40 <span>руб</span></p>
+                                <p class="pricing-person pricing-card-price" data-category = "person">67,50  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" data-category = "banket">3 372,40 <span>руб</span></p>
                             </div>
 
                             <div class=" pricing-card-horizontal-bottom">
@@ -1377,8 +1382,8 @@
                                 <h3 class="pricing-card-title">
                                     Вариант5 <span class="pricing-card-person">100 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price" style="display: none">82,20  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price" >8 221,90 <span>руб</span></p>
+                                <p class="pricing-person pricing-card-price" data-category = "person">82,20  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" data-category = "banket">8 221,90 <span>руб</span></p>
                             </div>
 
                             <div class=" pricing-card-horizontal-bottom">
@@ -1754,8 +1759,8 @@
                                 <h3 class="pricing-card-title">
                                     Вариант 666 <span class="pricing-card-person">100 person</span>
                                 </h3>
-                                <p class="pricing-person pricing-card-price" id="tab-1">82,20  <span>руб</span></p>
-                                <p class="pricing-banket pricing-card-price" id="tab-2">8 221,90 <span>руб</span></p>
+                                <p class="pricing-person pricing-card-price" id="tab-1" data-category = "person">82,20  <span>руб</span></p>
+                                <p class="pricing-banket pricing-card-price" id="tab-2" data-category = "banket">8 221,90 <span>руб</span></p>
                             </div>
 
                             <div class=" pricing-card-horizontal-bottom">
@@ -2273,8 +2278,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="section" style="padding: 100px 0;">
+            <div class="container">
+                <div class="arrow-svg-li">
+                    <ul class="arrow-svg-li-list">
+                        <li><span>Холодные закуски</span></li>
+                        <li><span>Канапе</span></li>
+                        <li><span>Салаты</span></li>
+                        <li><span>Салат порционный</span></li>
+                        <li><span>Порционное горячее</span></li>
+                        <li><span>Горячие закуск</span></li>
+                        <li><span>Соусы</span></li>
+                        <li><span>Напитки</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js2.js"></script>
+    <script src="table-btn.js"></script>
 
     <!-- <script src="/more-toggle.js"></script> -->
 </body>

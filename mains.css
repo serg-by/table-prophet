@@ -235,7 +235,7 @@ a:hover .arrow {
     line-height: 24px;
 }
 
-.pricing-person {
+.pricing-banket {
     display: none;
 }
 
@@ -828,4 +828,45 @@ a:hover .arrow {
     .new-tables tbody tr td:nth-child(2) {
         width: 95% !important;
     }
+}
+
+
+.btn{
+    margin-bottom: 20px;
+    padding:12px 20px;
+    background-color: beige;
+    color: black;
+
+}
+.btn--active{
+background-color: blue;
+}
+
+
+
+
+.arrow-svg-li li{
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.arrow-svg-li li::after{
+    position: absolute;
+    content: '';
+    background-image: url(./ok.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.arrow-svg-li-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: flex-end;
 }
