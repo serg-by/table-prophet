@@ -19,20 +19,27 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: hsla(211, 0%, 70%, 0.04);
+  /* background-color: hsla(211, 0%, 70%, 0.04); */
   color: #fff;
 }
 
-thead{
-  background-color: #444;
-  position: sticky;
- top: 64px;  
+tbody tr:not(:last-child){
+  border-bottom: 1px solid var(--border-btn);
 }
-th {  
+
+thead{
+ background-color: var(--bg-card-pricing);
+ /* position: sticky;
+ top: 64px;   */
+ 
+}
+
+
+/* th {  
 color: #fff;
  position: sticky;
  top: 64px;      
-}
+} */
 
 
 
@@ -44,12 +51,14 @@ color: #fff;
 } */
 
 .salat{
+  font-weight: 700;
     font-size: 16px;
     line-height: 1;
     
 }
 .salat td{
     /* border-bottom: 1px solid #007afc; */
+    background-color: hsla(211, 0%, 70%, 0.04);
     border-bottom: 1px solid #bbc2ce;
 }
 
@@ -80,6 +89,7 @@ tfoot td{
 
 thead th:first-child{
     border-top-left-radius: 8px;
+    width: 50%;
 }
 
 thead th:last-child{

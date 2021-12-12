@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>tablepricing</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="tablepricing.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <div class="container header-top__container">
+                <div class="header-top__social social">
+                    <ul class="social__list">
+                        <li class="social__link">social__link</li>
+                        <li class="social__link">social__link</li>
+                        <li class="social__link">social__link</li>
+                        <li class="social__link">social__link</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container header-main__container">
+                <a href="#!" class="logo">Logo</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__links"><a href="#!" class="nav__link">Link1</a></li>
+                        <li class="nav__links"><a href="#!" class="nav__link">Link2</a></li>
+                        <li class="nav__links"><a href="#!" class="nav__link">Link3</a></li>
+                        <li class="nav__links"><a href="#!" class="nav__link">Link4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<section style="padding: 100px 0">
+    <div class="container">
+
+        <div class="content">
+            <h2 class="h2-pricing">Наши цены</h2>
+            <p>Независимо от того, маленькая или большая компания, у нас есть доступный план для удовлетворения ваших потребностей.</p>
+
+            <div class="pricing-filte">
+                <button class="btn filter-pricing filter-pricing--active" data-filter="person">На человека</button>
+                <button class="btn filter-pricing " data-filter="banket">За банкет</button>
+            </div>
+        </div>
+
+        <div class="pricing__card">
+            <!-- variant 1-->
+            <div class="pricing__card__item">
+
+                <div class="card card--blue">
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">Вариант 1 <span class="card__pricing__person">/  70 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" data-category="person">73,40 <span>руб</span>
+                        </p>
+                        <p class="pricing__banket card__pricing__price" data-category="banket">5 140,20 <span>руб</span>
+                        </p>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салаты</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                                <li>Соусы</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="info-table">
+                        <table id="mytable">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><span>Наименование</span></th>
+                                    <th><span>Выход гр.</span></th>
+                                    <th><span>Кол-во порций</span></th>
+                                    <th><span>Стоимость порции</span></th>
+                                    <th><span>Итого</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="salat">
+                                    <td colspan="6"><span>ХОЛОДНЫЕ ЗАКУСКИ</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>1</span></td>
+                                    <td>
+                                        <span>
+                                            Мясное плато с чипсами и микс-салатом (балык из свинины, бастурма,
+                                            балык из птицы, ветчина, колбаса с/к)
+                                        </span>
+                                    </td>
+                                    <td><span>200</span></td>
+                                    <td><span>10</span></td>
+                                    <td><span>14.00</span></td>
+                                    <td><span>140.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>2</span></td>
+                                    <td>
+                                        <span> Плато из маринадов (маринованные грибы, овощи, капуса) </span>
+                                    </td>
+                                    <td><span> 200 </span></td>
+                                    <td><span> 10 </span></td>
+                                    <td><span> 9.00 </span></td>
+                                    <td><span> 90.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>3</span></td>
+                                    <td>
+                                        <span>
+                                            Сырное плато (камамбер, маасдам, пармезан, дор-блю, хлебные чипсы,
+                                            мед, виноград)
+                                        </span>
+                                    </td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 14 </span></td>
+                                    <td><span> 11.50 </span></td>
+                                    <td><span> 161.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>4</span></td>
+                                    <td><span> Крепы с паштетом из печени цыпленка </span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 14 </span></td>
+                                    <td><span> 7.50 </span></td>
+                                    <td><span> 105.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>5</span></td>
+                                    <td>
+                                        <span> Крепы с лососем, шпинатом и сливочно-творожным сыром </span>
+                                    </td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 14 </span></td>
+                                    <td><span> 8.50 </span></td>
+                                    <td><span> 119.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>6</span></td>
+                                    <td>
+                                        <span> Ростбиф из телятины с рукколой (вырезка гов., руккола) </span>
+                                    </td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 21 </span></td>
+                                    <td><span> 9.20 </span></td>
+                                    <td><span> 193.20 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>7</span></td>
+                                    <td>
+                                        <span>
+                                            Брускетта с морской форелью (тост, сливочно-творожный сыр, форель
+                                            сл./сол., кунжут)
+                                        </span>
+                                    </td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 3.40 </span></td>
+                                    <td><span> 119.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>8</span></td>
+                                    <td>
+                                        <span>
+                                            Брускетта с тапенадой (вяленый помидор, каперсы, оливки или маслины)
+                                        </span>
+                                    </td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 2.90 </span></td>
+                                    <td><span> 101.50 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>9</span></td>
+                                    <td><span> Рулетик из лосося с сыром филадельфия и кунжутом </span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 10 </span></td>
+                                    <td><span> 21.80 </span></td>
+                                    <td><span> 218.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Канапе</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>10</span></td>
+                                    <td><span> Мини-капрезе с соусом песто </span></td>
+                                    <td><span> 30 </span></td>
+                                    <td><span> 40 </span></td>
+                                    <td><span> 2.90 </span></td>
+                                    <td><span> 116.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>11</span></td>
+                                    <td>
+                                        <span>
+                                            Канапе из королевских креветок с оливками и соусом свит-чили
+                                        </span>
+                                    </td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 4.50 </span></td>
+                                    <td><span> 315.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Салаты</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>12</span></td>
+                                    <td><span> Мини-салат с лососем и авокадо </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 3.80 </span></td>
+                                    <td><span> 266.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>13</span></td>
+                                    <td>
+                                        <span>
+                                            Салат Греческий (микс-салат, помидор, огурец, сладкий перец, сыр
+                                            фета, маслины, лук, оливковая заправка)
+                                        </span>
+                                    </td>
+                                    <td><span> 200 </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 7.40 </span></td>
+                                    <td><span> 518.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Порционное горячее</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>14</span></td>
+                                    <td>
+                                        <span>
+                                            Филе куриное-гриль с картофелем по-деревенски и сливочно-грибным
+                                            соусом
+                                        </span>
+                                    </td>
+                                    <td><span> 150/150/30 </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 9.60 </span></td>
+                                    <td><span> 672.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Горячие закуски</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>15</span></td>
+                                    <td><span> Колбаски из цыпленка гриль </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 4.00 </span></td>
+                                    <td><span> 140.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>16</span></td>
+                                    <td><span> Колбаски из свинины гриль </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 4.10 </span></td>
+                                    <td><span> 143.50 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>17</span></td>
+                                    <td><span> Сулугуни в лаваше </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 10.00 </span></td>
+                                    <td><span> 350.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>18</span></td>
+                                    <td>
+                                        <span> Мини-шашлычки из овощей (шампиньоны, перец болгарский) </span>
+                                    </td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 4.50 </span></td>
+                                    <td><span> 225.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Соусы</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>19</span></td>
+                                    <td><span> Соус барбекю </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 1.00 </span></td>
+                                    <td><span> 35.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>20</span></td>
+                                    <td><span> Соус сырный </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 1.00 </span></td>
+                                    <td><span> 35.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Хлеб</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>21</span></td>
+                                    <td><span> Хлебная корзина </span></td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 0.80 </span></td>
+                                    <td><span> 28.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Дополнительные услуги</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>22</span></td>
+                                    <td colspan="4"><span>Транспортные расходы</span></td>
+                                    <td><span>50.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>23</span></td>
+                                    <td colspan="4"><span>Аренда посуды и текстиля</span></td>
+                                    <td><span>400.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>24</span></td>
+                                    <td colspan="4"><span>Персонал (обслуживание официантами)</span></td>
+                                    <td><span>600.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6"><span>итого: 5 140.20</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- variant 2-->
+            <div class="pricing__card__item">
+                <div class="card card--green">
+
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">
+                            Variant2 <span class="card__pricing__person">/ 40 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" data-category="person">84,00 <span>руб</span>
+                        </p>
+                        <p class="pricing__banket card__pricing__price" data-category="banket">3 386,70 <span>руб</span>
+                        </p>
+                    </div>
+
+                    <div class=" card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class=" card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="info-table">
+                        <table id="mytable">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><span>Наименование</span></th>
+                                    <th><span>Выход гр.</span></th>
+                                    <th><span>Кол-во порций</span></th>
+                                    <th><span>Стоимость порции</span></th>
+                                    <th><span>Итого</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="salat">
+                                    <td colspan="6"><span>ХОЛОДНЫЕ ЗАКУСКИ</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>1</span></td>
+                                    <td><span>Ассорти из рулетиков с сыром (цукини, баклажан, ветчина)</span></td>
+                                    <td><span>350</span></td>
+                                    <td><span>4</span></td>
+                                    <td><span>16.00</span></td>
+                                    <td><span>64.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>2</span></td>
+                                    <td><span>Крепы с лососем, шпинатом и сливочно-творожным сыром</span></td>
+                                    <td><span>150</span></td>
+                                    <td><span>8</span></td>
+                                    <td><span>8.50</span></td>
+                                    <td><span>68.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>3</span></td>
+                                    <td><span>Буженина из свинины с овощами, свежими помидорами и соусом тоннато</span>
+                                    </td>
+                                    <td><span>250</span></td>
+                                    <td><span>8</span></td>
+                                    <td><span>10.80</span></td>
+                                    <td><span>86.40</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>4</span></td>
+                                    <td><span>Брускетта с вяленым окороком, сыром камамбер и медом</span></td>
+                                    <td><span>35</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>2.70</span></td>
+                                    <td><span>54.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>5</span></td>
+                                    <td><span>Брускетта с уткой конфи, рукколой и малиной</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>3.60</span></td>
+                                    <td><span>72.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>6</span></td>
+                                    <td><span>Рулетик из лосося с сыром филадельфия и кунжутом</span></td>
+                                    <td><span>150</span></td>
+                                    <td><span>10</span></td>
+                                    <td><span>21.80</span></td>
+                                    <td><span>218.00</span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Канапе</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>7</span></td>
+                                    <td><span>Канапе из сельдерея, вяленных томатов, сыра моцарелла</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>2.60</span></td>
+                                    <td><span>65.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>8</span></td>
+                                    <td><span>Канапе из молодой моцареллы с ананасом и розмарином</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>2.60</span></td>
+                                    <td><span>65.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>9</span></td>
+                                    <td><span>Канапе сырные шарики с виноградом в ореховой стружке</span></td>
+                                    <td><span>250</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>3.50</span></td>
+                                    <td><span>87.50</span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Салаты</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>10</span></td>
+                                    <td><span>Салат с ростбифом (микс-салат, ростбиф, жареные шампиньоны, помидорка
+                                            черри, перепелиное яйцо, хрустящий жареный лук, пармезан, соус
+                                            Тоннато)-порционно
+                                        </span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>40</span></td>
+                                    <td><span>5.60</span></td>
+                                    <td><span>224.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>11</span></td>
+                                    <td><span>Салат Греческий (микс-салат, помидор, огурец, сладкий перец, сыр фета,
+                                            маслины, лук, оливковая заправка)</span></td>
+                                    <td><span>200</span></td>
+                                    <td><span>40</span></td>
+                                    <td><span>7.40</span></td>
+                                    <td><span>296.00</span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Порционное горячее</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>12</span></td>
+                                    <td><span>Стейк из говядины с картофелем по-деревенски и соусом демигляс</span></td>
+                                    <td><span>150/150/30</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>19.50</span></td>
+                                    <td><span>390.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>13</span></td>
+                                    <td><span>Стейк из морской форели с картофельным пюре и шпинатом под сливочным
+                                            соусом дор-блю</span></td>
+                                    <td><span>180/150/30</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>20.50</span></td>
+                                    <td><span>410.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Горячие закуски</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>14</span></td>
+                                    <td><span>Шашлык ассорти (свинина шея, колбаски, бедро куриное)</span></td>
+                                    <td><span>300</span></td>
+                                    <td><span>15</span></td>
+                                    <td><span>13.20</span></td>
+                                    <td><span>198.30</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>15</span></td>
+                                    <td><span>Овощи гриль</span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>4.90</span></td>
+                                    <td><span>122.50</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>16</span></td>
+                                    <td><span>Сулугуни в лаваше</span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>10.00</span></td>
+                                    <td><span>200.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Хлеб</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>17</span></td>
+                                    <td><span>Хлебная корзина</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>0.80</span></td>
+                                    <td><span>16.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Дополнительные услуги</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>18</span></td>
+                                    <td colspan="4"><span>Транспортные расходы</span></td>
+                                    <td><span>50.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>19</span></td>
+                                    <td colspan="4"><span>Аренда посуды и текстиля</span></td>
+                                    <td><span>400.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>20</span></td>
+                                    <td colspan="4"><span>Персонал (обслуживание официантами)</span></td>
+                                    <td><span>300.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="v2-color">
+                                <tr>
+                                    <td colspan="6"><span>итого: 3 386.70</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- variant 3 -->
+            <div class="pricing__card__item">
+                <div class="card card--yellow">
+                    <div class="badge-pricing-xit">
+                        <div class="dot green"><span><span></span></span></div>
+                        <span>ХИТ</span>
+                    </div>
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">
+                            Вариант3 <span class="card__pricing__person">/ 35 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" data-category="person">85,40 <span>руб</span>
+                        </p>
+                        <p class="pricing__banket card__pricing__price" data-category="banket">2 990,30 <span>руб</span>
+                        </p>
+                    </div>
+
+                    <div class=" card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class=" card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                                <li>Соусы</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-table">
+                        <table id="mytable">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><span>Наименование</span></th>
+                                    <th><span>Выход гр.</span></th>
+                                    <th><span>Кол-во порций</span></th>
+                                    <th><span>Стоимость порции</span></th>
+                                    <th><span>Итого</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="salat">
+                                    <td colspan="6"><span>ХОЛОДНЫЕ ЗАКУСКИ</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>1</span></td>
+                                    <td><span>Мясное плато с чипсами и микс-салатом (балык из свинины, бастурма, балык
+                                            из птицы,ветчина,колбаса с/к)</span></td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 14.00 </span></td>
+                                    <td><span> 70.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>2</span></td>
+                                    <td><span>Овощное плато ( зелень, томаты, огурец, болгарский перец, сельдирей,
+                                            рукола,айсберг)</span></td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 6.50 </span></td>
+                                    <td><span> 32.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>3</span></td>
+                                    <td><span>Сырное плато (камемберт, масдам, пармезан,дор-блю, хлебные чипсы, мед,
+                                            виноград)</span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 8 </span></td>
+                                    <td><span> 11.50 </span></td>
+                                    <td><span> 92.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>4</span></td>
+                                    <td><span> Фруктовое плато (сезонные фрукты) </span></td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 6 </span></td>
+                                    <td><span> 5.50 </span></td>
+                                    <td><span> 33.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>5</span></td>
+                                    <td><span> Ассорти из рулетиков с сыром (цукини, баклажан, ветчина) </span></td>
+                                    <td><span> 350 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 16.00 </span></td>
+                                    <td><span> 80.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>6</span></td>
+                                    <td><span> Ростбиф из телятины с рукколой(вырезка гов., руккола) </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 10 </span></td>
+                                    <td><span> 9.20 </span></td>
+                                    <td><span> 92.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>7</span></td>
+                                    <td><span> Крепы с паштетом из печени цыпленка
+                                        </span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 6 </span></td>
+                                    <td><span> 7.50 </span></td>
+                                    <td><span> 45.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>8</span></td>
+                                    <td><span> Крепы с лососем, шпинатом и сливочно-творожным сыром</span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 6 </span></td>
+                                    <td><span> 8.50 </span></td>
+                                    <td><span> 51.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>9</span></td>
+                                    <td><span> Рулетик из лосося с сыром филадельфия и кунжутом </span></td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 10 </span></td>
+                                    <td><span> 21.80 </span></td>
+                                    <td><span> 218.00 </span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Канапе</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>10</span></td>
+                                    <td><span> Канапе сырные шарики с виноградом в ореховой стружке </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 3.50 </span></td>
+                                    <td><span> 52.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>11</span></td>
+                                    <td><span> Канапе из сыра камембер с виноградом </span></td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.30 </span></td>
+                                    <td><span> 34.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>12</span></td>
+                                    <td><span> Канапе из молодой моцареллы с ананасом и розмарином </span></td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 39.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>13</span></td>
+                                    <td><span> Канапе из пармской ветчины с дыней и мятой </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 39.00 </span></td>
+
+                                </tr>
+                                <tr>
+                                    <td><span>14</span></td>
+                                    <td><span> Канапе из лосося с сливочным сыром (тост, огурец св., лосось сл./сол. сыр
+                                            сливочный) </span></td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 3.10 </span></td>
+                                    <td><span> 46.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>15</span></td>
+                                    <td><span> Канапе из ветчины, корнишона, сыр филадельфия, багет </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.10 </span></td>
+                                    <td><span> 31.50 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>16</span></td>
+                                    <td><span> Мини-капрезе с соусом песто </span></td>
+                                    <td><span> 30 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.90 </span></td>
+                                    <td><span> 43.50 </span></td>
+
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Салаты</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>17</span></td>
+                                    <td><span> Мини-салат с лососем и авокадо </span></td>
+                                    <td><span> 70 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 3.80 </span></td>
+                                    <td><span> 133.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>18</span></td>
+                                    <td><span>Цезарь с куриной грудкой (куриная грудка, листья салата, помидоры черри,
+                                            перепелиное яйцо, пармезан, соус Цезарь, соус ворчестер)</span></td>
+                                    <td><span> 200 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 9.30 </span></td>
+                                    <td><span> 325.50 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Порционное горячее</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>19</span></td>
+                                    <td><span> Утиная ножка под клюквенным соусом c пюре из брокколи </span></td>
+                                    <td><span> 200/100/30 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 18.00 </span></td>
+                                    <td><span> 630.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Горячие закуски</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>20</span></td>
+                                    <td><span> Сулугуни в лаваше </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 17 </span></td>
+                                    <td><span> 10.00 </span></td>
+                                    <td><span> 170.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>21</span></td>
+                                    <td><span> Шашлык из свинины (шея) </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 7.00 </span></td>
+                                    <td><span> 245.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>22</span></td>
+                                    <td><span> Овощи гриль </span></td>
+                                    <td><span> 100 </span></td>
+                                    <td><span> 17 </span></td>
+                                    <td><span> 4.90 </span></td>
+                                    <td><span> 83.30 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Соус</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>23</span></td>
+                                    <td><span> Соус барбекю </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 1.00 </span></td>
+                                    <td><span> 15.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>24</span></td>
+                                    <td><span> Соус тар-тар </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 1.50 </span></td>
+                                    <td><span> 22.50 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Хлеб</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>25</span></td>
+                                    <td><span> Хлебная корзина </span></td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 0.80 </span></td>
+                                    <td><span> 16.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Дополнительные услуги</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>26</span></td>
+                                    <td colspan="4"><span>Транспортные расходы</span></td>
+                                    <td><span>50.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>27</span></td>
+                                    <td colspan="4">Аренда посуды и текстиля</span></td>
+                                    <td><span>120.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>28</span></td>
+                                    <td colspan="4">Персонал (обслуживание официантами)</span></td>
+                                    <td><span>180.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="v3-color">
+                                <tr>
+                                    <td colspan="6"><span>итого: 2 990.30</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- variant 4-->
+            <div class="pricing__card__item">
+                <div class="card card--purple">
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">
+                            Вариант4 <span class="card__pricing__person">/ 50 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" data-category="person">67,50 <span>руб</span>
+                        </p>
+                        <p class="pricing__banket card__pricing__price" data-category="banket">3 372,40 <span>руб</span>
+                        </p>
+                    </div>
+
+                    <div class=" card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class=" card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                                <li>Соусы</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="info-table">
+                        <table id="mytable">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><span>Наименование</span></th>
+                                    <th><span>Выход гр.</span></th>
+                                    <th><span>Кол-во порций</span></th>
+                                    <th><span>Стоимость порции</span></th>
+                                    <th><span>Итого</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="salat">
+                                    <td colspan="6"><span>ХОЛОДНЫЕ ЗАКУСКИ</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>1</span></td>
+                                    <td>
+                                        <span>
+                                            Мясное плато с чипсами и микс-салатом (балык из свинины, бастурма,
+                                            балык из птицы,ветчина,колбаса с/к)
+                                        </span>
+                                    </td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 14.00 </span></td>
+                                    <td><span> 70.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>2</span></td>
+                                    <td>
+                                        <span>
+                                            Овощное плато ( зелень, томаты, огурец, болгарский перец, сельдирей,
+                                            рукола,айсберг)
+                                        </span>
+                                    </td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 6.50 </span></td>
+                                    <td><span> 32.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>3</span></td>
+                                    <td>
+                                        <span>
+                                            Сырное плато (камемберт, масдам, пармезан,дор-блю, хлебные чипсы,
+                                            мед, виноград)
+                                        </span>
+                                    </td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 8 </span></td>
+                                    <td><span> 11.50 </span></td>
+                                    <td><span> 92.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>4</span></td>
+                                    <td><span> Фруктовое плато (сезонные фрукты) </span></td>
+                                    <td><span> 250 </span></td>
+                                    <td><span> 6 </span></td>
+                                    <td><span> 5.50 </span></td>
+                                    <td><span> 33.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>5</span></td>
+                                    <td>
+                                        <span>
+                                            Ассорти из рулетиков с сыром (цукини, баклажан, ветчина)
+                                        </span>
+                                    </td>
+                                    <td><span> 350 </span></td>
+                                    <td><span> 5 </span></td>
+                                    <td><span> 16.00 </span></td>
+                                    <td><span> 80.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>6</span></td>
+                                    <td>
+                                        <span> Капрезе из молодой моцареллы с помидором и соусом Песто </span>
+                                    </td>
+                                    <td><span> 200 </span></td>
+                                    <td><span> 7 </span></td>
+                                    <td><span> 8.70 </span></td>
+                                    <td><span> 60.90 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>7</span></td>
+                                    <td>
+                                        <span> Ассорти из тортилий (курица, ветчина, лосось, тунец) </span>
+                                    </td>
+                                    <td><span> 180 </span></td>
+                                    <td><span> 14 </span></td>
+                                    <td><span> 9.00 </span></td>
+                                    <td><span> 126.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>8</span></td>
+                                    <td>
+                                        <span> Крепы с лососем, шпинатом и сливочно-творожным сыром </span>
+                                    </td>
+                                    <td><span> 150 </span></td>
+                                    <td><span> 6 </span></td>
+                                    <td><span> 8.50 </span></td>
+                                    <td><span> 51.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>9</span></td>
+                                    <td><span> Террин из мяса цыплёнка с курагой и орешками </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 4.30 </span></td>
+                                    <td><span> 107.50 </span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Канапе</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>10</span></td>
+                                    <td>
+                                        <span> Канапе из сельдерея, вяленных томатов, сыра моцарелла </span>
+                                    </td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 65.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>11</span></td>
+                                    <td><span> Канапе из сыра бри с фисташками и сиропом </span></td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 65.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>12</span></td>
+                                    <td>
+                                        <span> Канапе из молодой моцареллы с ананасом и розмарином </span>
+                                    </td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 39.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>13</span></td>
+                                    <td><span> Канапе из пармской ветчины с дыней и мятой </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.60 </span></td>
+                                    <td><span> 39.00 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>14</span></td>
+                                    <td>
+                                        <span>
+                                            Канапе из лосося с сливочным сыром (тост, огурец св., лосось
+                                            сл./сол. сыр сливочный)
+                                        </span>
+                                    </td>
+                                    <td><span> 20 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 3.10 </span></td>
+                                    <td><span> 46.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>15</span></td>
+                                    <td>
+                                        <span> Канапе из ветчины, корнишона, сыр филадельфия, багет </span>
+                                    </td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.10 </span></td>
+                                    <td><span> 31.50 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>16</span></td>
+                                    <td><span> Мини-капрезе с соусом песто </span></td>
+                                    <td><span> 30 </span></td>
+                                    <td><span> 15 </span></td>
+                                    <td><span> 2.90 </span></td>
+                                    <td><span> 43.50 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Салаты</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>17</span></td>
+                                    <td>
+                                        <span>
+                                            Цезарь с куриной грудкой (куриная грудка, листья салата, помидоры
+                                            черри, перепелиное яйцо, пармезан, соус Цезарь, соус ворчестер)
+                                        </span>
+                                    </td>
+                                    <td><span> 200 </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 9.30 </span></td>
+                                    <td><span> 465.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Порционное горячее</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>18</span></td>
+                                    <td>
+                                        <span>
+                                            Филе куриное-гриль с картофелем по-деревенски и сливочно-грибным
+                                            соусом
+                                        </span>
+                                    </td>
+                                    <td><span> 150/150/30 </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 9.60 </span></td>
+                                    <td><span> 480.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Горячие закуски</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>19</span></td>
+                                    <td>
+                                        <span> Мини-шашлычки из морской форели с помидорками черри </span>
+                                    </td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 35 </span></td>
+                                    <td><span> 8.60 </span></td>
+                                    <td><span> 301.00 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>20</span></td>
+                                    <td><span> Мини шашлычки из свинины с перцем </span></td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 6.10 </span></td>
+                                    <td><span> 152.50 </span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>21</span></td>
+                                    <td>
+                                        <span> Мини-шашлычки из овощей (шампиньоны, перец болгарский) </span>
+                                    </td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 4.50 </span></td>
+                                    <td><span> 112.50 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Соус</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>22</span></td>
+                                    <td><span> Соус свит-чили </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 1.50 </span></td>
+                                    <td><span> 37.50 </span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>23</span></td>
+                                    <td><span> Кетчуп </span></td>
+                                    <td><span> 50 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 0.30 </span></td>
+                                    <td><span> 7.50 </span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Хлеб</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>24</span></td>
+                                    <td><span> Хлебная корзина </span></td>
+                                    <td><span> 75 </span></td>
+                                    <td><span> 25 </span></td>
+                                    <td><span> 0.80 </span></td>
+                                    <td><span> 20.00 </span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Дополнительные услуги</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>25</span></td>
+                                    <td colspan="4"><span>Транспортные расходы</span></td>
+                                    <td><span>50.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>26</span></td>
+                                    <td colspan="4"><span>Аренда посуды и текстиля</span></td>
+                                    <td><span>200.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>27</span></td>
+                                    <td colspan="4"><span>Персонал (обслуживание официантами)</span></td>
+                                    <td><span>350.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="v4-color">
+                                <tr>
+                                    <td colspan="6"><span>итого: 3 372.40</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- variant 5-->
+            <div class="pricing__card__item">
+                <div class="card card--orange">
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">
+                            Вариант5 <span class="card__pricing__person">/ 100 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" data-category="person">82,20 <span>руб</span>
+                        </p>
+                        <p class="pricing__banket card__pricing__price" data-category="banket">8 221,90 <span>руб</span>
+                        </p>
+                    </div>
+
+                    <div class=" card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class=" card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салаты</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                                <li>Соусы</li>
+                                <li>Напитки</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="info-table">
+                        <table id="mytable">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><span>Наименование</span></th>
+                                    <th><span>Выход гр.</span></th>
+                                    <th><span>Кол-во порций</span></th>
+                                    <th><span>Стоимость порции</span></th>
+                                    <th><span>Итого</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="salat">
+                                    <td colspan="6"><span>ХОЛОДНЫЕ ЗАКУСКИ</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>1</span></td>
+                                    <td><span>
+                                            Мясное плато с чипсами и микс-салатом (балык из свинины, бастурма,
+                                            балык из птицы,ветчина,колбаса с/к)
+                                        </span></td>
+                                    <td><span>250</span></td>
+                                    <td><span>5</span></td>
+                                    <td><span>14.00</span></td>
+                                    <td><span>70.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>2</span></td>
+                                    <td><span>
+                                            Овощное плато ( зелень, томаты, огурец, болгарский перец,
+                                            сельдирей, рукола,айсберг)
+                                        </span></td>
+                                    <td><span>250</span></td>
+                                    <td><span>5</span></td>
+                                    <td><span>6.50</span></td>
+                                    <td><span>32.50</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>3</span></td>
+                                    <td><span>
+                                            Сырное плато (камемберт, масдам, пармезан,дор-блю, хлебные чипсы,
+                                            мед, виноград)
+                                        </span></td>
+                                    <td><span>150</span></td>
+                                    <td><span>8</span></td>
+                                    <td><span>11.50</span></td>
+                                    <td><span>92.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>4</span></td>
+                                    <td><span>Фруктовое плато (сезонные фрукты)</span></td>
+                                    <td><span>250</span></td>
+                                    <td><span>6</span></td>
+                                    <td><span>5.50</span></td>
+                                    <td><span>33.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>5</span></td>
+                                    <td><span>Ассорти из рулетиков с сыром (цукини, баклажан, ветчина)</span></td>
+                                    <td><span>350</span></td>
+                                    <td><span>5</span></td>
+                                    <td><span>16.00</span></td>
+                                    <td><span>80.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>6</span></td>
+                                    <td><span>Капрезе из молодой моцареллы с помидором и соусом Песто</span></td>
+                                    <td><span>200</span></td>
+                                    <td><span>7</span></td>
+                                    <td><span>8.70</span></td>
+                                    <td><span>60.90</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>7</span></td>
+                                    <td><span>Ассорти из тортилий (курица, ветчина, лосось, тунец)</span></td>
+                                    <td><span>180</span></td>
+                                    <td><span>14</span></td>
+                                    <td><span>9.00</span></td>
+                                    <td><span>126.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>8</span></td>
+                                    <td><span>Ростбиф из телятины с рукколой(вырезка гов.,руккола)</span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>9.20</span></td>
+                                    <td><span>460.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>9</span></td>
+                                    <td><span>Крепы с лососем, шпинатом и сливочно-творожным сыром</span></td>
+                                    <td><span>150</span></td>
+                                    <td><span>12</span></td>
+                                    <td><span>8.50</span></td>
+                                    <td><span>102.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>10</span></td>
+                                    <td><span>Рулетик из лосося с сыром филадельфия и кунжутом</span></td>
+                                    <td><span>150</span></td>
+                                    <td><span>17</span></td>
+                                    <td><span>21.80</span></td>
+                                    <td><span>370.60</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Канапе</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>11</span></td>
+                                    <td><span>
+                                            Канапе из сыровяленного окорока с томатами Конфи и корнишоном на
+                                            тосте из злаков
+                                        </span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>3.30</span></td>
+                                    <td><span>165.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>12</span></td>
+                                    <td><span>Канапе из сыра бри с фисташками и сиропом</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>2.60</span></td>
+                                    <td><span>130.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>13</span></td>
+                                    <td><span>Канапе из молодой моцареллы с ананасом и розмарином</span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>2.60</span></td>
+                                    <td><span>130.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>14</span></td>
+                                    <td><span>Канапе из пармской ветчины с дыней и мятой</span></td>
+                                    <td><span>25</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>2.60</span></td>
+                                    <td><span>130.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>15</span></td>
+                                    <td><span>
+                                            Канапе из лосося с сливочным сыром (тост, огурец св., лосось
+                                            сл./сол. сыр сливочный)
+                                        </span></td>
+                                    <td><span>20</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>3.10</span></td>
+                                    <td><span>155.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>16</span></td>
+                                    <td><span>
+                                            Канапе из королевских креветок с оливками и соусом свит-чили
+                                        </span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>4.50</span></td>
+                                    <td><span>225.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>17</span></td>
+                                    <td><span>Мини-капрезе с соусом песто</span></td>
+                                    <td><span>30</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>2.90</span></td>
+                                    <td><span>145.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Салаты</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>18</span></td>
+                                    <td><span>
+                                            Салат Греческий (микс-салат, помидор, огурец, сладкий перец, сыр
+                                            фета, маслины, лук, оливковая заправка)
+                                        </span></td>
+                                    <td><span>200</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>7.40</span></td>
+                                    <td><span>370.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>19</span></td>
+                                    <td><span>
+                                            Салат с лососем, мякотью апельсина и авокадо (лосось, руккола,
+                                            апельсин, авокадо, мацарелла, песто, зелень)
+                                        </span></td>
+                                    <td><span>180</span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>9.60</span></td>
+                                    <td><span>960.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Порционное горячее</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>20</span></td>
+                                    <td><span>
+                                            Медальоны из свинины с картофельными дольками и соусом демигляс
+                                        </span></td>
+                                    <td><span>150/150/30</span></td>
+                                    <td><span>100</span></td>
+                                    <td><span>11.30</span></td>
+                                    <td><span>1130.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Горячие закуски</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>21</span></td>
+                                    <td><span>Мини-шашлычки из морской форели с помидорками черри</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>8.60</span></td>
+                                    <td><span>645.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>22</span></td>
+                                    <td><span>Мини-шашлычки из филе куриного в беконе с грушой</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>5.80</span></td>
+                                    <td><span>435.00</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>23</span></td>
+                                    <td><span>Мини-шашлычки из овощей (шампиньоны, перец болгарский)</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>4.50</span></td>
+                                    <td><span>337.50</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Соус</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>24</span></td>
+                                    <td><span>Соус тар-тар</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>1.50</span></td>
+                                    <td><span>75.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>25</span></td>
+                                    <td><span>Соус свит-чили</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>1.50</span></td>
+                                    <td><span>75.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Напитки</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>26</span></td>
+                                    <td><span>Морс клюквенный</span></td>
+                                    <td><span>200</span></td>
+                                    <td><span>1000</span></td>
+                                    <td><span>1.70</span></td>
+                                    <td><span>170.00</span></td>
+                                </tr>
+
+                                <tr class="salat">
+                                    <td colspan="6"><span>Хлеб</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>27</span></td>
+                                    <td><span>Хлебная корзина</span></td>
+                                    <td><span>75</span></td>
+                                    <td><span>50</span></td>
+                                    <td><span>0.80</span></td>
+                                    <td><span>40.00</span></td>
+                                </tr>
+                                <tr class="salat">
+                                    <td colspan="6"><span>Дополнительные услуги</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>28</span></td>
+                                    <td colspan="4"><span>Транспортные расходы</span></td>
+                                    <td><span>50.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>29</span></td>
+                                    <td colspan="4"><span>Аренда посуды и текстиля</span></td>
+                                    <td><span>200.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>30</span></td>
+                                    <td colspan="4"><span>Персонал (обслуживание официантами)</span></td>
+                                    <td><span>500.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="v5-color">
+                                <tr>
+                                    <td colspan="6"><span>итого: 8 221.90</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- variant 6-->
+            <div class="pricing__card__item">
+                <div class="card">
+                    <div class="card__top">
+                        <h3 class="card__pricing__title">
+                            Вариант 666 <span class="card__pricing__person">/ 100 person</span>
+                        </h3>
+                        <p class="pricing__person card__pricing__price" id="tab-1" data-category="person">82,20
+                            <span>руб</span></p>
+                        <p class="pricing__banket card__pricing__price" id="tab-2" data-category="banket">8 221,90
+                            <span>руб</span></p>
+                    </div>
+
+                    <div class=" card__bottom">
+                        <div class="card__button__group">
+                            <button class="btn-reset btn btn--pricing btn-tablepricing">
+                                Подробнее
+                                <span class="icon-btn arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"
+                                        xmlns:v="https://vecta.io/nano">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
+                                        <defs></defs>
+                                    </svg>
+                                </span>
+
+                            </button>
+
+                            <a href="/ss.svg" download="menu_variant_5_prophetby" class="btn-download">
+                                <button class="btn btn-reset btn--pricing ">
+                                    Скачать PDF
+                                    <span class="icon-btn download-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                            <polyline points="7 11 12 16 17 11" />
+                                            <line x1="12" y1="4" x2="12" y2="16" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class=" card__pricing__list">
+                            <ul>
+                                <li>Холодные закуски</li>
+                                <li>Канапе</li>
+                                <li>Салаты</li>
+                                <li>Салат порционный</li>
+                                <li>Порционное горячее</li>
+                                <li>Горячие закуск</li>
+                                <li>Соусы</li>
+                                <li>Напитки</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+    
+    <script src="/tablepricing.js"></script>
+</body>
+
+</html>

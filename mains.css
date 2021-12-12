@@ -261,9 +261,9 @@ a:hover .arrow {
     /* margin-bottom: 24px; */
 }
 
-.pricing-card-horizontal-bottom button {
+/* .pricing-card-horizontal-bottom button {
     margin-bottom: 0;
-}
+} */
 
 /* .hor-list {
     column-gap: 86px;
@@ -299,7 +299,7 @@ a:hover .arrow {
 
 .more-toggle {
     display: inline-block;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
     white-space: nowrap;
     cursor: pointer;
     background: transparent;
@@ -308,16 +308,17 @@ a:hover .arrow {
     color: #fff;
     transition: color 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     padding: 12px 20px;
-    border-radius: 100px;
+    border-radius: 6px;
     border: 1px solid #566171;
+    width: auto;
     height: 43px;
 }
 
 .more-toggle.active,
 .more-toggle--active,
 .more-toggle:hover {
-    color: #007afc;
-    border: 1px solid #007afc;
+    color: #b0cb1f;
+    border: 1px solid #b0cb1f;
 }
 
 .info-table {
@@ -451,9 +452,9 @@ a:hover .arrow {
     justify-content: flex-start;
 }
 
-.button-group button:not(:last-child) {
+/* .button-group button:not(:last-child) {
     margin-right: 24px;
-}
+} */
 
 .more-toggle {
     display: flex;
@@ -476,19 +477,20 @@ a:hover .arrow {
     color: #fff;
     padding: 13px 20px;
     border: 1px solid #566171;
-    border-radius: 100px;
+    border-radius: 6px;
     text-decoration: none;
+    background-color: rgba(178, 204, 30, .2);
     font-size: 14px;
     line-height: 1;
-    display: inherit;
+    display: flex;
     cursor: pointer;
     transition: color 150ms cubic-bezier(0.19, 1, 0.22, 1), border 150ms;
     white-space: nowrap;
 }
 
 .btn-download:hover {
-    color: #007afc;
-    border: 1px solid #007afc;
+    color: #b0cb1f;
+    border: 1px solid #b0cb1f;
 }
 
 .h2-pricing {
@@ -716,6 +718,16 @@ a:hover .arrow {
 }
 
 @media (max-width: 575.98px) {
+    .button-group {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .more-toggle{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
     .pricing-item-horizontal {
         padding: 16px;
     }
@@ -831,7 +843,21 @@ a:hover .arrow {
 }
 
 
-.btn{
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.content p{
+    font-size: 1.25rem;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* .btn{
     margin-bottom: 20px;
     padding:12px 20px;
     background-color: beige;
@@ -840,10 +866,35 @@ a:hover .arrow {
 }
 .btn--active{
 background-color: blue;
+} */
+
+.pricing-filte{
+    padding: 4px;
+    background-color: #141618;
+    border-radius: 8px;
+    border: 1px solid rgba(178, 204, 30, .2);
+}
+
+.filter-pricing{
+    padding: 8px 16px;
+    white-space: nowrap;
+    width: auto;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: #141618;
+    color: #a0aaba;
+    transition: all .3s ease-in;
 }
 
 
-
+.filter-pricing--active,
+.btn--active{
+  background-color:rgb(178, 204, 30);
+  color: #141618;
+}
 
 .arrow-svg-li li{
     position: relative;
